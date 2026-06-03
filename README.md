@@ -18,7 +18,7 @@ Import the solution package into your Power Platform environment.
 Power Apps
 → Solutions
 → Import Solution
-→ WorkplaceAutopilotAgent_1_0_0_1.zip
+→ WorkplaceAutopilotAgent_1_0_0_2.zip
 ```
 
 Wait for all components to finish importing.
@@ -101,28 +101,6 @@ A Planner execution task is created and linked to the memory record.
 ### 5. Start Tracking
 
 The workplace goal is now being tracked for future follow-up and escalation.
-
----
-
-# Repository Structure
-
-```text
-/
-├── solution/
-│   └── WorkplaceAutopilotAgent.zip
-│
-├── screenshots/
-│   ├── task-understanding.png
-│   ├── neuroai-scoring.png
-│   ├── memory-record.png
-│   └── planner-task.png
-│
-├── docs/
-│   ├── architecture.png
-│   └── demo-script.md
-│
-└── README.md
-```
 
 ---
 
