@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #4b5563; }
+      .box-title { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .box-text { font: 400 14px Arial, sans-serif; fill: #374151; }
+      .small { font: 400 13px Arial, sans-serif; fill: #6b7280; }
+      .layer { font: 700 13px Arial, sans-serif; fill: #2563eb; letter-spacing: .5px; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 16; }
+      .agent { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 16; }
+      .tool { fill: #ecfeff; stroke: #0891b2; stroke-width: 2; rx: 16; }
+      .memory { fill: #f0fdf4; stroke: #16a34a; stroke-width: 2; rx: 16; }
+      .action { fill: #fff7ed; stroke: #ea580c; stroke-width: 2; rx: 16; }
+      .future { fill: #f9fafb; stroke: #9ca3af; stroke-width: 2; stroke-dasharray: 8 6; rx: 16; }
+      .arrow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .dasharrow { stroke: #6b7280; stroke-width: 2.5; fill: none; stroke-dasharray: 8 6; marker-end: url(#arrowheadGray); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="arrowheadGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="950" fill="#f8fafc"/>
+  <text x="700" y="55" text-anchor="middle" class="title">Workplace Autopilot Agent — MVP Architecture</text>
+  <text x="700" y="85" text-anchor="middle" class="subtitle">Implemented scope: task understanding → NeuroAI priority scoring → Dataverse goal memory → Planner execution task</text>
+
+  <!-- Inputs -->
+  <rect x="80" y="150" width="270" height="125" class="box"/>
+  <text x="215" y="180" text-anchor="middle" class="box-title">Workplace Signal</text>
+  <text x="110" y="212" class="box-text">• Manual Copilot message</text>
+  <text x="110" y="238" class="box-text">• Teams message/input</text>
+  <text x="110" y="264" class="box-text">• Outlook/email input</text>
+
+  <!-- Agent -->
+  <rect x="520" y="145" width="360" height="135" class="agent"/>
+  <text x="700" y="176" text-anchor="middle" class="box-title">Workplace Autopilot Agent</text>
+  <text x="552" y="211" class="box-text">Copilot Studio orchestration agent</text>
+  <text x="552" y="237" class="box-text">Routes the workplace signal through tools</text>
+  <text x="552" y="263" class="box-text">Returns task, priority, memory, Planner output</text>
+
+  <!-- Tool 1 -->
+  <rect x="520" y="350" width="360" height="120" class="tool"/>
+  <text x="700" y="378" text-anchor="middle" class="layer">PERCEPTION LAYER</text>
+  <text x="700" y="407" text-anchor="middle" class="box-title">Task Understanding Tool</text>
+  <text x="552" y="438" class="box-text">Extracts task title, description, due date, category</text>
+  <text x="552" y="462" class="small">Output: structured task JSON</text>
+
+  <!-- Tool 2 -->
+  <rect x="520" y="530" width="360" height="130" class="tool"/>
+  <text x="700" y="558" text-anchor="middle" class="layer">SELECTIVE ATTENTION LAYER</text>
+  <text x="700" y="587" text-anchor="middle" class="box-title">NeuroAI Attention Scoring Tool</text>
+  <text x="552" y="618" class="box-text">Scores urgency, deadline, client impact, dependency</text>
+  <text x="552" y="642" class="small">Output: priority score, level, reasons, explanation</text>
+
+  <!-- Dataverse -->
+  <rect x="110" y="705" width="350" height="135" class="memory"/>
+  <text x="285" y="733" text-anchor="middle" class="layer">WORKING MEMORY LAYER</text>
+  <text x="285" y="762" text-anchor="middle" class="box-title">Dataverse Goal Memory Record</text>
+  <text x="140" y="794" class="box-text">Stores unresolved workplace goal</text>
+  <text x="140" y="818" class="box-text">Holds task, priority, status, Planner reference</text>
+
+  <!-- Planner -->
+  <rect x="940" y="705" width="350" height="135" class="action"/>
+  <text x="1115" y="733" text-anchor="middle" class="layer">ACTION LAYER</text>
+  <text x="1115" y="762" text-anchor="middle" class="box-title">Microsoft Planner Task</text>
+  <text x="970" y="794" class="box-text">Creates execution task for Medium/High priority work</text>
+  <text x="970" y="818" class="box-text">Linked back to Dataverse memory record</text>
+
+  <!-- Future -->
+  <rect x="520" y="780" width="360" height="95" class="future"/>
+  <text x="700" y="809" text-anchor="middle" class="box-title">Future Extension</text>
+  <text x="552" y="840" class="box-text">Follow-up and monitoring flow</text>
+  <text x="552" y="862" class="small">Scheduled reminders and escalation not in current MVP</text>
+
+  <!-- arrows -->
+  <path d="M350 212 C420 212, 450 212, 520 212" class="arrow"/>
+  <path d="M700 280 L700 350" class="arrow"/>
+  <path d="M700 470 L700 530" class="arrow"/>
+  <path d="M610 660 C520 690, 420 710, 460 770" class="arrow"/>
+  <path d="M790 660 C900 690, 990 710, 940 770" class="arrow"/>
+  <path d="M940 792 C790 740, 620 740, 460 792" class="arrow"/>
+  <path d="M700 660 L700 780" class="dasharrow"/>
+
+  <!-- labels -->
+  <text x="420" y="195" class="small">source message</text>
+  <text x="720" y="323" class="small">tool call</text>
+  <text x="720" y="505" class="small">structured task JSON</text>
+  <text x="423" y="705" class="small">create memory first</text>
+  <text x="903" y="705" class="small">create execution task</text>
+  <text x="665" y="735" class="small">update Dataverse with Planner ID/URL</text>
+
+  <!-- Footer -->
+  <text x="700" y="920" text-anchor="middle" class="small">NeuroAI mapping: workplace signal → perception → selective attention → working memory → action</text>
+</svg>
