@@ -15,7 +15,7 @@ The agent automatically transforms workplace communication into structured, prio
 Import the solution package into your Power Platform environment.
 
 ```text
-Power Apps
+[Copilot studio](https://copilotstudio.microsoft.com/)
 → Solutions
 → Import Solution
 → WorkplaceAutopilotAgent_1_0_0_2.zip
